@@ -86,6 +86,10 @@ def show():
       .ld-cta-title {{ font-size: 32px !important; }}
       .ld-cta-sub {{ font-size: 14px !important; }}
       .ld-footer {{ padding: 20px 16px !important; }}
+      .ld-about-inner {{ grid-template-columns: 1fr !important; gap: 32px !important; }}
+      .ld-about-section {{ padding: 48px 16px !important; }}
+      .ld-about-h2 {{ font-size: 26px !important; }}
+      .ld-about-card {{ padding: 16px !important; }}
     }}
     @media (max-width: 480px) {{
       .ld-h1 {{ font-size: clamp(34px, 8vw, 44px) !important; }}
@@ -368,11 +372,7 @@ def show():
     </section>
     """, unsafe_allow_html=True)
 
-    # Hero button
-    h1, h2, h3 = st.columns([1.5, 3.5, 1])
-    with h1:
-        if st.button("Open Dashboard →", type="primary", key="hero_open", use_container_width=True):
-            st.session_state.page = "login"; st.rerun()
+
 
     st.markdown("""
     <div class="ld-stats">
@@ -446,13 +446,13 @@ def show():
 
     st.markdown("""
 
-    <section style="padding:80px 48px;background:#12103A;border-top:1px solid rgba(123,92,245,0.12);">
-      <div style="max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+    <section class="ld-about-section" style="padding:80px 48px;background:#12103A;border-top:1px solid rgba(123,92,245,0.12);">
+      <div class="ld-about-inner" style="max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
         <div>
           <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:3px;color:#7B5CF5;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px;">
             <span style="width:24px;height:1px;background:#7B5CF5;display:inline-block;"></span>About Wouessi
           </div>
-          <h2 style="font-family:'DM Sans',sans-serif;font-weight:800;font-size:clamp(32px,4vw,48px);line-height:1.05;letter-spacing:-0.5px;margin-bottom:20px;color:#F4F1EB;">
+          <h2 class="ld-about-h2" style="font-family:'DM Sans',sans-serif;font-weight:800;font-size:clamp(32px,4vw,48px);line-height:1.05;letter-spacing:-0.5px;margin-bottom:20px;color:#F4F1EB;">
             Powerful Digital Solutions for <span style="color:#7B5CF5;display:block;">Business Growth</span>
           </h2>
           <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(123,92,245,0.1);border:1px solid rgba(123,92,245,0.25);border-radius:20px;padding:6px 14px;margin-bottom:24px;">
@@ -467,17 +467,17 @@ def show():
           </p>
         </div>
         <div style="display:flex;flex-direction:column;gap:16px;">
-          <div style="background:rgba(45,0,200,0.12);border:1px solid rgba(123,92,245,0.2);border-left:3px solid #7B5CF5;border-radius:6px;padding:20px 24px;">
+          <div class="ld-about-card" style="background:rgba(45,0,200,0.12);border:1px solid rgba(123,92,245,0.2);border-left:3px solid #7B5CF5;border-radius:6px;padding:20px 24px;">
             <div style="font-size:18px;margin-bottom:8px;">&#127758;</div>
             <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:15px;color:#F4F1EB;margin-bottom:6px;">Global Reach</div>
             <div style="font-size:13px;color:#8A94A8;line-height:1.6;">Serving businesses across the globe with cutting-edge digital solutions tailored to diverse markets.</div>
           </div>
-          <div style="background:rgba(45,0,200,0.12);border:1px solid rgba(123,92,245,0.2);border-left:3px solid #7B5CF5;border-radius:6px;padding:20px 24px;">
+          <div class="ld-about-card" style="background:rgba(45,0,200,0.12);border:1px solid rgba(123,92,245,0.2);border-left:3px solid #7B5CF5;border-radius:6px;padding:20px 24px;">
             <div style="font-size:18px;margin-bottom:8px;">&#128640;</div>
             <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:15px;color:#F4F1EB;margin-bottom:6px;">Innovation First</div>
             <div style="font-size:13px;color:#8A94A8;line-height:1.6;">Pushing boundaries with unparalleled digital solutions that transform how businesses operate.</div>
           </div>
-          <div style="background:rgba(45,0,200,0.12);border:1px solid rgba(123,92,245,0.2);border-left:3px solid #7B5CF5;border-radius:6px;padding:20px 24px;">
+          <div class="ld-about-card" style="background:rgba(45,0,200,0.12);border:1px solid rgba(123,92,245,0.2);border-left:3px solid #7B5CF5;border-radius:6px;padding:20px 24px;">
             <div style="font-size:18px;margin-bottom:8px;">&#128205;</div>
             <div style="font-family:'DM Sans',sans-serif;font-weight:700;font-size:15px;color:#F4F1EB;margin-bottom:6px;">Toronto, Canada</div>
             <div style="font-size:13px;color:#8A94A8;line-height:1.6;">Headquartered in the heart of Toronto — a hub of technology, diversity, and business excellence.</div>
