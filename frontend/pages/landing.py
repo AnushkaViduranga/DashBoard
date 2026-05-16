@@ -61,37 +61,37 @@ def show():
     }}
 
 
-    @media (max-width: 768px) {
-      .ld-nav { padding: 12px 16px !important; flex-wrap: wrap !important; gap: 6px !important; }
-      .ld-badge { display: none !important; }
-      .ld-hero { grid-template-columns: 1fr !important; padding: 36px 16px 40px !important; gap: 28px !important; min-height: unset !important; }
-      .ld-hero::after { display: none !important; }
-      .ld-h1 { font-size: clamp(38px, 9vw, 56px) !important; line-height: 1.05 !important; letter-spacing: -0.5px !important; word-break: keep-all !important; overflow-wrap: normal !important; }
-      .ld-sub { font-size: 15px !important; max-width: 100% !important; }
-      .ld-frame { display: none !important; }
-      .ld-stats { grid-template-columns: 1fr 1fr !important; }
-      .ld-stat { padding: 24px 16px !important; border-right: none !important; border-bottom: 1px solid rgba(123,92,245,0.12) !important; }
-      .ld-stat-num { font-size: 36px !important; }
-      .ld-stat-txt { font-size: 12px !important; }
-      .ld-features { padding: 40px 16px !important; }
-      .ld-feat-headline { font-size: 28px !important; margin-bottom: 28px !important; }
-      .ld-feat-grid { grid-template-columns: 1fr !important; }
-      .ld-feat-card { padding: 20px 16px !important; }
-      .ld-chat-section { padding: 40px 16px !important; }
-      .ld-chat-title { font-size: 24px !important; }
-      .ld-chat-wrap { padding: 16px !important; }
-      .ld-bubble-user { max-width: 88% !important; font-size: 13px !important; }
-      .ld-bubble-ai { max-width: 94% !important; font-size: 12px !important; }
-      .ld-cta { padding: 48px 16px !important; }
-      .ld-cta-title { font-size: 32px !important; }
-      .ld-cta-sub { font-size: 14px !important; }
-      .ld-footer { padding: 20px 16px !important; }
-    }
-    @media (max-width: 480px) {
-      .ld-h1 { font-size: clamp(34px, 8vw, 44px) !important; }
-      .ld-nav { padding: 10px 12px !important; }
-      .ld-logo-img { height: 40px !important; width: 40px !important; }
-    }
+    @media (max-width: 768px) {{
+      .ld-nav {{ padding: 12px 16px !important; flex-wrap: wrap !important; gap: 6px !important; }}
+      .ld-badge {{ display: none !important; }}
+      .ld-hero {{ grid-template-columns: 1fr !important; padding: 36px 16px 40px !important; gap: 28px !important; min-height: unset !important; }}
+      .ld-hero::after {{ display: none !important; }}
+      .ld-h1 {{ font-size: clamp(38px, 9vw, 56px) !important; line-height: 1.05 !important; letter-spacing: -0.5px !important; word-break: keep-all !important; overflow-wrap: normal !important; }}
+      .ld-sub {{ font-size: 15px !important; max-width: 100% !important; }}
+      .ld-frame {{ display: none !important; }}
+      .ld-stats {{ grid-template-columns: 1fr 1fr !important; }}
+      .ld-stat {{ padding: 24px 16px !important; border-right: none !important; border-bottom: 1px solid rgba(123,92,245,0.12) !important; }}
+      .ld-stat-num {{ font-size: 36px !important; }}
+      .ld-stat-txt {{ font-size: 12px !important; }}
+      .ld-features {{ padding: 40px 16px !important; }}
+      .ld-feat-headline {{ font-size: 28px !important; margin-bottom: 28px !important; }}
+      .ld-feat-grid {{ grid-template-columns: 1fr !important; }}
+      .ld-feat-card {{ padding: 20px 16px !important; }}
+      .ld-chat-section {{ padding: 40px 16px !important; }}
+      .ld-chat-title {{ font-size: 24px !important; }}
+      .ld-chat-wrap {{ padding: 16px !important; }}
+      .ld-bubble-user {{ max-width: 88% !important; font-size: 13px !important; }}
+      .ld-bubble-ai {{ max-width: 94% !important; font-size: 12px !important; }}
+      .ld-cta {{ padding: 48px 16px !important; }}
+      .ld-cta-title {{ font-size: 32px !important; }}
+      .ld-cta-sub {{ font-size: 14px !important; }}
+      .ld-footer {{ padding: 20px 16px !important; }}
+    }}
+    @media (max-width: 480px) {{
+      .ld-h1 {{ font-size: clamp(34px, 8vw, 44px) !important; }}
+      .ld-nav {{ padding: 10px 12px !important; }}
+      .ld-logo-img {{ height: 40px !important; width: 40px !important; }}
+    }}
 
     @keyframes fadeUp  {{ from{{opacity:0;transform:translateY(20px)}} to{{opacity:1;transform:translateY(0)}} }}
     @keyframes fadeIn  {{ from{{opacity:0}} to{{opacity:1}} }}
