@@ -313,7 +313,7 @@ def show():
     </style>
 
     <div class="ld-nav">
-      <img src="data:image/png;base64,{LOGO_B64}" class="ld-logo-img" alt="Wouessi Logo"/>
+      <img src="data:image/png;base64,{LOGO_B64}" class="ld-logo-img" alt="Wouessi Logo" style="height:48px;width:auto;max-width:220px;object-fit:contain;"/>
       <div class="ld-badge">SME Intelligence Platform</div>
       <div style="width:160px"></div>
     </div>

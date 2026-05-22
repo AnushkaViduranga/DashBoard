@@ -1,10 +1,13 @@
 import streamlit as st
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from header_footer import render_header, render_footer
 import pandas as pd
 from api_client import get_sales, get_marketing
 from config import CURRENCY_SYMBOL, PERIOD_OPTIONS, DEFAULT_PERIOD
 
 def show():
-    st.title("Sales & Marketing")
+    render_header("Sales & Marketing")
     period = st.selectbox("Period", PERIOD_OPTIONS, index=PERIOD_OPTIONS.index(DEFAULT_PERIOD))
     sales_data = get_sales(period); mkt_data = get_marketing(period)
     if not sales_data or not mkt_data: st.error("Could not load data."); return
@@ -54,3 +57,4 @@ def show():
         df_d["roi"] = df_d["roi"].apply(lambda x: f"{x:.2f}x")
         df_d.columns = ["Campaign","Spend","Revenue","ROI","Conversions"]
         st.dataframe(df_d, use_container_width=True, hide_index=True)
+    render_footer()

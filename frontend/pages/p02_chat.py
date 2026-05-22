@@ -1,8 +1,11 @@
 import streamlit as st
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from header_footer import render_header, render_footer
 from api_client import ask_question
 
 def show():
-    st.title("Ask a question")
+    render_header("Ask a Question")
     st.caption("Ask anything about your business in plain English.")
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = []
@@ -44,3 +47,4 @@ def show():
     if st.session_state.chat_history:
         if st.button("Clear conversation"):
             st.session_state.chat_history = []; st.rerun()
+    render_footer()
